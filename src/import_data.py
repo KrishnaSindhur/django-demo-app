@@ -6,7 +6,7 @@ import os,sys
 import csv
 
 cwd = os.getcwd()
-project_dir = cwd+'/django_project/'
+project_dir = cwd+'/src/django_project/'
 sys.path.append(project_dir)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
@@ -16,7 +16,7 @@ django.setup()
 from web_app.models import CorpusData
 
 try:
-    path = cwd + '/data_files/Corpus.csv'
+    path = cwd + '/src/data_files/Corpus.csv'
     with open(path) as f:
             reader = csv.DictReader(f)
             for row in reader:
