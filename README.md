@@ -23,8 +23,6 @@ $ docker-compose run web python src/manage.py makemigrations <br>
 
 $ docker-compose run web python src/manage.py migrate <br>
 
-$ docker-compose run web python src/import_data.py <br>
-
 ### step5: Now start a webserver
 $ docker-compose up
 
