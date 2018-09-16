@@ -2,6 +2,9 @@ from django.test import TestCase
 from .models import CorpusData
 
 class CorpusTestCase(TestCase):
+    """
+    Simple test case for one model CorpusData
+    """
     def setUp(self):
          CorpusData.objects.create(key='ten', value=10)
          CorpusData.objects.create(key ='thousand',value=1000)
@@ -11,4 +14,3 @@ class CorpusTestCase(TestCase):
         key_value2 = CorpusData.objects.get(key='thousand')
         self.assertEqual(key_value1.value, 10)
         self.assertEqual(key_value2.value, 1000)
-        
